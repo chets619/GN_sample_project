@@ -17,12 +17,5 @@ angular.module("app", [])
             }, function myError(response) {
                 $scope.response = response.statusText;
             });
-
-
-            $http.post('http://localhost:3001/submitForm', JSON.stringify({
-                name: $scope.name
-            })).then(function success(res) {
-                console.log("POST")
-            })
         };
     }]);
